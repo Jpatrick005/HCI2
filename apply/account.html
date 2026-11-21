@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Application Account | Yale School of Art</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../index.html">
+          <svg class="brand-shield" width="44" height="50" viewBox="0 0 38 44" fill="none" aria-hidden="true">
+            <defs><clipPath id="sc"><path d="M2 2H36V22C36 33 19 42 19 42C19 42 2 33 2 22V2Z" /></clipPath></defs>
+            <g clip-path="url(#sc)">
+              <rect width="19" height="44" fill="#00447C" />
+              <rect x="19" width="19" height="44" fill="#E6392E" />
+              <path d="M19 6Q24 4 28.5 6T38 6V10Q33 12 28.5 10T19 10ZM19 15Q24 13 28.5 15T38 15V19Q33 21 28.5 19T19 19ZM19 24Q24 22 28.5 24T38 24V28Q33 30 28.5 28T19 28Z" fill="#FFD23F" />
+              <circle cx="19" cy="20" r="7.5" fill="#00447C" />
+              <path d="M19 12.5A7.5 7.5 0 0 0 19 27.5V12.5Z" fill="#FFD23F" />
+            </g>
+          </svg>
+          <span>YALE SCHOOL OF ART</span>
+        </a>
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle" aria-hidden="true" />
+        <label class="mobile-menu-button" for="mobile-menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+        <nav aria-label="Main navigation">
+          <div class="nav-item"><a class="nav-link" href="../program.html">PROGRAM</a></div>
+          <div class="nav-item"><a class="nav-link active" href="account.html">ADMISSIONS</a></div>
+          <div class="nav-item"><a class="nav-link" href="../calendar.html">CALENDAR</a></div>
+          <div class="nav-item"><a class="nav-link" href="../people.html">PEOPLE</a></div>
+        </nav>
+        <div class="header-actions">
+          <form class="search" role="search">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+            <input type="search" placeholder="Search programs, events..." aria-label="Search programs and events" />
+          </form>
+        </div>
+      </header>
+
+      <main class="apply-main">
+        <div class="stepper" aria-label="Application progress">
+          <a class="step-chevron active" href="account.html">1. Personal Background</a>
+          <a class="step-chevron" href="step2.html">2. Program &amp; Academic</a>
+          <a class="step-chevron" href="step3.html">3. Statement &amp; 3 Refs</a>
+          <a class="step-chevron" href="step4.html">4. Portfolio &amp; Media</a>
+          <a class="step-chevron" href="step5.html">5. Review &amp; $100 Fee</a>
+        </div>
+
+        <section class="apply-card apply-card-narrow">
+          <h1 class="apply-title">Create Your Application Account</h1>
+          <p class="apply-subtitle">Before beginning you must establish an account you can create your application account.</p>
+
+          <form action="step1.html" class="form-grid" style="gap: 18px;">
+            <div class="form-grid grid-2">
+              <div class="field">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text" placeholder="Jane" />
+              </div>
+              <div class="field">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text" placeholder="Doe" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="janedoe000@gmail.com" />
+            </div>
+
+            <div class="field">
+              <label for="password">Password</label>
+              <input id="password" type="password" placeholder="Create a password" />
+            </div>
+
+            <div class="field">
+              <label for="discipline">Primary Discipline</label>
+              <select id="discipline">
+                <option value="">Primary Discipline</option>
+                <option value="gd">Graphic Design</option>
+                <option value="pp">Painting / Printmaking</option>
+                <option value="ph">Photography</option>
+                <option value="sc">Sculpture</option>
+              </select>
+            </div>
+
+            <a class="btn-primary-lg" href="step1.html" style="margin-top: 8px;">Create Account &amp; Continue</a>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

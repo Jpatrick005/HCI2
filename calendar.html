@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School of Art Calendar | Yale School of Art</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="site-shell" id="site">
+      <!-- Fixed Navigation Bar (Identical across all pages) -->
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Yale School of Art home">
+          <svg class="brand-shield" width="44" height="50" viewBox="0 0 38 44" fill="none" aria-hidden="true">
+            <defs>
+              <clipPath id="shield-clip-cal">
+                <path d="M2 2H36V22C36 33 19 42 19 42C19 42 2 33 2 22V2Z" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#shield-clip-cal)">
+              <rect x="0" y="0" width="19" height="44" fill="#00447C" />
+              <circle cx="6" cy="7" r="1.3" fill="#FFD23F" />
+              <circle cx="13" cy="7" r="1.3" fill="#FFD23F" />
+              <circle cx="9.5" cy="12" r="1.3" fill="#FFD23F" />
+              <circle cx="6" cy="17" r="1.3" fill="#FFD23F" />
+              <circle cx="6" cy="26" r="1.3" fill="#FFD23F" />
+              <circle cx="10" cy="31" r="1.3" fill="#FFD23F" />
+              <circle cx="14" cy="36" r="1.3" fill="#FFD23F" />
+              <rect x="19" y="0" width="19" height="44" fill="#E6392E" />
+              <path d="M19 6Q24 4 28.5 6T38 6V10Q33 12 28.5 10T19 10Z" fill="#FFD23F" />
+              <path d="M19 15Q24 13 28.5 15T38 15V19Q33 21 28.5 19T19 19Z" fill="#FFD23F" />
+              <path d="M19 24Q24 22 28.5 24T38 24V28Q33 30 28.5 28T19 28Z" fill="#FFD23F" />
+              <path d="M19 33Q24 31 28.5 33T38 33V37Q33 39 28.5 37T19 37Z" fill="#FFD23F" />
+              <circle cx="19" cy="20" r="7.5" fill="#00447C" />
+              <path d="M19 12.5A7.5 7.5 0 0 0 19 27.5V12.5Z" fill="#FFD23F" />
+            </g>
+          </svg>
+          <span>YALE SCHOOL OF ART</span>
+        </a>
+
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle" aria-hidden="true" />
+        <label class="mobile-menu-button" for="mobile-menu-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </label>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+          <div class="nav-item">
+            <a class="nav-link" href="program.html">PROGRAM</a>
+            <ul class="dropdown-menu">
+              <li><a href="program.html">MFA in Graphic Design</a></li>
+              <li><a href="program.html">MFA in Painting &amp; Printmaking</a></li>
+              <li><a href="program.html">MFA in Photography</a></li>
+              <li><a href="program.html">MFA in Sculpture</a></li>
+              <li><a href="program.html">Undergraduate Art</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link" href="apply/account.html">ADMISSIONS</a>
+            <ul class="dropdown-menu">
+              <li><a href="apply/account.html">MFA Requirements</a></li>
+              <li><a href="apply/step4.html">Portfolio Guidelines</a></li>
+              <li><a href="apply/step5.html">Tuition &amp; Aid</a></li>
+              <li><a href="apply/account.html">Application Portal</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link active" href="calendar.html">CALENDAR</a>
+            <ul class="dropdown-menu">
+              <li><a href="calendar.html">Exhibitions</a></li>
+              <li><a href="calendar.html">Public Lectures</a></li>
+              <li><a href="calendar.html">MFA Open Crits</a></li>
+              <li><a href="calendar.html">Academic Calendar</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link" href="people.html">PEOPLE</a>
+            <ul class="dropdown-menu">
+              <li><a href="people.html">Faculty &amp; Staff</a></li>
+              <li><a href="people.html">Visiting Critics</a></li>
+              <li><a href="people.html">Facilities &amp; Studios</a></li>
+              <li><a href="people.html">News &amp; Stories</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <form class="search" role="search">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" placeholder="Search programs, events..." aria-label="Search programs and events" />
+          </form>
+
+          <button class="icon-button" type="button" aria-label="Use dark mode">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <div class="notification-wrap">
+            <button class="icon-button notification-button" type="button" aria-label="Profile and notifications">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+              </svg>
+              <span class="notif-dot" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="cal-main">
+        <!-- Top Header & Category Filter Pills -->
+        <div class="cal-top-bar">
+          <div>
+            <p class="cal-eyebrow">ACADEMIC &amp; PUBLIC EVENTS</p>
+            <h1 class="cal-title">School of Art Calendar</h1>
+            <p class="cal-subtitle">Select a highlighted date on the calendar to view scheduled tours, exhibitions, and lectures.</p>
+          </div>
+
+          <div class="cal-tabs" role="tablist" aria-label="Event categories">
+            <button class="cal-tab active" type="button" data-filter="all">All Events</button>
+            <button class="cal-tab" type="button" data-filter="admissions">Admissions</button>
+            <button class="cal-tab" type="button" data-filter="exhibitions">Exhibitions</button>
+          </div>
+        </div>
+
+        <!-- Featured This Month Hero Banner -->
+        <section class="featured-banner" aria-label="Featured event this month">
+          <div class="featured-media">
+            <img src="images/featured-crits.jpg" alt="MFA photography critique gallery wall" />
+          </div>
+
+          <div class="featured-body">
+            <p class="featured-eyebrow">FEATURED THIS MONTH</p>
+            <div class="featured-badges">
+              <span class="badge-yellow">CRITIQUE</span>
+              <span class="badge-community">Open to SoA Community</span>
+              <span class="badge-ysoa">YSoA</span>
+            </div>
+            <h2>MFA Crits in Photography</h2>
+            <p class="featured-speakers">With Giancarlo Montes Santangelo, Pierce Sappey, Kelly Nano-Miranda</p>
+            <p class="featured-date-text">Sunday, November 15, 2026</p>
+          </div>
+
+          <div class="featured-cta">
+            <div class="featured-date-big">
+              <span>NOV</span>
+              <strong>15</strong>
+            </div>
+            <a class="btn-banner-yellow" href="apply/account.html">Log in to view details</a>
+          </div>
+        </section>
+
+        <!-- Main Two-Column Calendar Workspace -->
+        <div class="cal-workspace">
+          <!-- Left: Interactive November 2026 Calendar Grid -->
+          <section class="cal-panel" aria-label="November 2026 calendar">
+            <div class="cal-month-bar">
+              <h2 class="cal-month-title" id="cal-month-label">November 2026</h2>
+
+              <div class="cal-month-controls">
+                <span class="cal-legend"><span class="cal-dot"></span> Scheduled Event</span>
+                <div class="cal-nav-arrows">
+                  <button class="cal-arrow-btn" type="button" aria-label="Previous month">&lsaquo;</button>
+                  <button class="cal-arrow-btn" type="button" aria-label="Next month">&rsaquo;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cal-weekdays" aria-hidden="true">
+              <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+            </div>
+
+            <div class="cal-grid">
+              <!-- Week 1 -->
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">1</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">2</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">3</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">4</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">5</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">6</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">7</span></div></div>
+
+              <!-- Week 2 -->
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">8</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">9</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">10</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">11</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">12</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">13</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">14</span></div></div>
+
+              <!-- Week 3 (NOV 15 Highlighted with Hover View Day) -->
+              <div class="cal-day has-event" tabindex="0" data-slide="1" data-category="admissions">
+                <div class="cal-day-top">
+                  <span class="cal-day-num">15</span>
+                  <span class="cal-dot" aria-hidden="true"></span>
+                </div>
+                <div class="cal-event-chip">
+                  <strong>Studio Tours</strong>
+                  <span>+2 More Events</span>
+                </div>
+                <span class="cal-view-day-btn">View Day</span>
+              </div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">16</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">17</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">18</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">19</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">20</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">21</span></div></div>
+
+              <!-- Week 4 (NOV 24 Highlighted with Hover View Day) -->
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">22</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">23</span></div></div>
+              <div class="cal-day has-event" tabindex="0" data-slide="2" data-category="exhibitions">
+                <div class="cal-day-top">
+                  <span class="cal-day-num">24</span>
+                  <span class="cal-dot" aria-hidden="true"></span>
+                </div>
+                <div class="cal-event-chip">
+                  <strong>Exhibition</strong>
+                  <span>+2 More Events</span>
+                </div>
+                <span class="cal-view-day-btn">View Day</span>
+              </div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">25</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">26</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">27</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">28</span></div></div>
+
+              <!-- Week 5 -->
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">29</span></div></div>
+              <div class="cal-day"><div class="cal-day-top"><span class="cal-day-num">30</span></div></div>
+              <div class="cal-day is-outside"><div class="cal-day-top"><span class="cal-day-num">1</span></div></div>
+              <div class="cal-day is-outside"><div class="cal-day-top"><span class="cal-day-num">2</span></div></div>
+              <div class="cal-day is-outside"><div class="cal-day-top"><span class="cal-day-num">3</span></div></div>
+              <div class="cal-day is-outside"><div class="cal-day-top"><span class="cal-day-num">4</span></div></div>
+              <div class="cal-day is-outside"><div class="cal-day-top"><span class="cal-day-num">5</span></div></div>
+            </div>
+          </section>
+
+          <!-- Right: Filters + Dark Upcoming Events Carousel -->
+          <aside class="cal-panel">
+            <div class="filter-head">
+              <span class="filter-label">FILTER CALENDAR BY</span>
+              <button id="clear-filters-btn" class="clear-filters-btn" type="button">Clear Filters</button>
+            </div>
+
+            <div class="filter-stack">
+              <select class="filter-select" id="filter-type" aria-label="Filter by event type">
+                <option value="all">Event Type: All</option>
+                <option value="lecture">Event Type: Lectures</option>
+                <option value="tour">Event Type: Studio Tours</option>
+                <option value="exhibition">Event Type: Exhibitions</option>
+              </select>
+
+              <select class="filter-select" id="filter-dept" aria-label="Filter by department">
+                <option value="all">Department: All Programs</option>
+                <option value="gd">Department: Graphic Design</option>
+                <option value="pp">Department: Painting / Printmaking</option>
+                <option value="ph">Department: Photography</option>
+                <option value="sc">Department: Sculpture</option>
+              </select>
+
+              <select class="filter-select" id="filter-audience" aria-label="Filter by audience">
+                <option value="soa">Audience: SoA Community</option>
+                <option value="public">Audience: Open to Public</option>
+                <option value="prospective">Audience: Prospective Students</option>
+              </select>
+            </div>
+
+            <div class="upcoming-head">
+              <span class="filter-label">UPCOMING EVENTS</span>
+              <span class="upcoming-hint">Click date for details</span>
+            </div>
+
+            <div class="upcoming-dark-card">
+              <!-- Slide 1: NOV 04 -->
+              <article class="upcoming-slide active" data-slide-index="0">
+                <div class="upcoming-top">
+                  <div class="upcoming-date-box"><span>NOV</span><strong>04</strong></div>
+                  <div>
+                    <span class="upcoming-kicker">UPCOMING EVENT</span>
+                    <span class="badge-yellow">LECTURE</span>
+                  </div>
+                </div>
+                <h3>Artist Lectures: Teresa Baker &amp; Margaret Ewing</h3>
+                <p class="upcoming-venue">Hastings Hall Auditorium</p>
+                <p class="upcoming-meta">6:00 PM EST &bull; 1 of 3 events on this date</p>
+              </article>
+
+              <!-- Slide 2: NOV 15 -->
+              <article class="upcoming-slide" data-slide-index="1">
+                <div class="upcoming-top">
+                  <div class="upcoming-date-box"><span>NOV</span><strong>15</strong></div>
+                  <div>
+                    <span class="upcoming-kicker">UPCOMING EVENT</span>
+                    <span class="badge-yellow">STUDIO TOUR</span>
+                  </div>
+                </div>
+                <h3>Fall Studio Tours &amp; MFA Open Critique</h3>
+                <p class="upcoming-venue">Green Hall Gallery</p>
+                <p class="upcoming-meta">10:00 AM EST &bull; 3 events scheduled on this date</p>
+              </article>
+
+              <!-- Slide 3: NOV 24 -->
+              <article class="upcoming-slide" data-slide-index="2">
+                <div class="upcoming-top">
+                  <div class="upcoming-date-box"><span>NOV</span><strong>24</strong></div>
+                  <div>
+                    <span class="upcoming-kicker">UPCOMING EVENT</span>
+                    <span class="badge-yellow">EXHIBITION</span>
+                  </div>
+                </div>
+                <h3>Exhibition: Overcurrent &amp; Roma Publications</h3>
+                <p class="upcoming-venue">36 Edgewood Ave Gallery</p>
+                <p class="upcoming-meta">1:30 PM EST &bull; 1 of 2 events on this date</p>
+              </article>
+
+              <!-- Carousel Footer Controls -->
+              <div class="upcoming-footer">
+                <span>Click the date for details</span>
+                <div class="carousel-controls">
+                  <span id="slide-counter">1 of 3</span>
+                  <button id="prev-slide" class="carousel-btn" type="button" aria-label="Previous event">&lsaquo;</button>
+                  <button id="next-slide" class="carousel-btn" type="button" aria-label="Next event">&rsaquo;</button>
+                  <div class="carousel-dots" aria-label="Event slides">
+                    <button class="carousel-dot active" type="button" data-dot="0" aria-label="Event 1"></button>
+                    <button class="carousel-dot" type="button" data-dot="1" aria-label="Event 2"></button>
+                    <button class="carousel-dot" type="button" data-dot="2" aria-label="Event 3"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <!-- =====================================================
+         EVENT DETAILS POP-UP MODAL (Opens on Calendar Date Click)
+         ===================================================== -->
+    <div id="event-modal" class="css-modal" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
+      <div class="event-modal-dialog">
+        <!-- Top Navy Header -->
+        <div class="event-modal-header">
+          <div class="event-modal-header-left">
+            <svg class="event-modal-shield" width="32" height="36" viewBox="0 0 38 44" fill="none" aria-hidden="true">
+              <defs>
+                <clipPath id="shield-clip-modal">
+                  <path d="M2 2H36V22C36 33 19 42 19 42C19 42 2 33 2 22V2Z" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#shield-clip-modal)">
+                <rect x="0" y="0" width="19" height="44" fill="#00447C" />
+                <circle cx="6" cy="7" r="1.3" fill="#FFD23F" />
+                <circle cx="13" cy="7" r="1.3" fill="#FFD23F" />
+                <circle cx="9.5" cy="12" r="1.3" fill="#FFD23F" />
+                <circle cx="6" cy="17" r="1.3" fill="#FFD23F" />
+                <circle cx="6" cy="26" r="1.3" fill="#FFD23F" />
+                <circle cx="10" cy="31" r="1.3" fill="#FFD23F" />
+                <circle cx="14" cy="36" r="1.3" fill="#FFD23F" />
+                <rect x="19" y="0" width="19" height="44" fill="#E6392E" />
+                <path d="M19 6Q24 4 28.5 6T38 6V10Q33 12 28.5 10T19 10Z" fill="#FFD23F" />
+                <path d="M19 15Q24 13 28.5 15T38 15V19Q33 21 28.5 19T19 19Z" fill="#FFD23F" />
+                <path d="M19 24Q24 22 28.5 24T38 24V28Q33 30 28.5 28T19 28Z" fill="#FFD23F" />
+                <path d="M19 33Q24 31 28.5 33T38 33V37Q33 39 28.5 37T19 37Z" fill="#FFD23F" />
+                <circle cx="19" cy="20" r="7.5" fill="#00447C" />
+                <path d="M19 12.5A7.5 7.5 0 0 0 19 27.5V12.5Z" fill="#FFD23F" />
+              </g>
+            </svg>
+
+            <span id="event-modal-date" class="event-modal-date">NOVEMBER 15</span>
+            <span class="event-modal-divider" aria-hidden="true"></span>
+            <span id="event-modal-count" class="event-modal-count">3 EVENTS</span>
+          </div>
+
+          <div class="event-modal-header-right">
+            <span id="event-modal-counter" class="event-modal-counter">Event 1 of 3</span>
+            <button id="event-modal-close" class="event-modal-close" type="button" aria-label="Close event details">&times;</button>
+          </div>
+        </div>
+
+        <!-- 2-Column Body -->
+        <div class="event-modal-body">
+          <div class="event-modal-media">
+            <img id="event-modal-img" src="images/featured-crits.jpg" alt="Event gallery space" />
+          </div>
+
+          <div class="event-modal-content">
+            <span id="event-modal-badge" class="event-modal-badge">Open to SoA Community</span>
+            <h2 id="event-modal-title" class="event-modal-title">Devotional Alchemy</h2>
+
+            <div class="event-modal-meta-group">
+              <span class="event-modal-meta-label">DATE &amp; TIME</span>
+              <p id="event-modal-datetime" class="event-modal-meta-value">Sunday, Nov 15, 2026 &bull; 2:00 PM – 6:00 PM</p>
+            </div>
+
+            <div class="event-modal-meta-group">
+              <span class="event-modal-meta-label">LOCATION</span>
+              <p id="event-modal-location" class="event-modal-meta-value">63 Audubon St, New Haven</p>
+            </div>
+
+            <div class="event-modal-footer">
+              <a id="event-modal-action" class="event-modal-cta" href="apply/account.html">View details</a>
+
+              <div class="event-modal-nav">
+                <button id="event-modal-prev" class="event-modal-arrow" type="button" aria-label="Previous event on this date">&lsaquo;</button>
+                <button id="event-modal-next" class="event-modal-arrow" type="button" aria-label="Next event on this date">&rsaquo;</button>
+                <div id="event-modal-dots" class="event-modal-dots" aria-label="Events on this date"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/calendar.js"></script>
+  </body>
+</html>
