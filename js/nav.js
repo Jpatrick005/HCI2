@@ -64,9 +64,13 @@ try {
     let activeSection = "";
     if (isInApply) {
       activeSection = "admissions";
-    } else if (pageName === "program" || pageName === "exhibition") {
+    } else if (pageName === "program") {
       activeSection = "program";
-    } else if (pageName === "calendar") {
+    } else if (
+      pageName === "calendar" ||
+      pageName === "exhibition" ||
+      pageName === "exhibitions"
+    ) {
       activeSection = "calendar";
     } else if (pageName === "people") {
       activeSection = "people";
