@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modalDate: "September 29 - October 15, 2026",
       year: "2026",
       course: "Graphic Design",
-      image: "images/roma-publications.jpg",
+      image: "/HCI2/images/roma_publications.jpg",
       docImage: null,
       description: "Roma Publications is free and open to the public from September 29 - October 15 2026, 2–6 pm.",
       credit: "",
@@ -21,8 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
       modalDate: "April 10 – 16, 2026",
       year: "2026",
       course: "Graphic Design",
-      image: "images/in-the-weeds.jpg",
-      docImage: "images/in-the-weeds.jpg",
+      image: "/HCI2/images/in_the_weeds.avif",
+      docImage: [
+        "/HCI2/images/in_the_weeds.avif",
+        "/HCI2/images/IMG_8504.avif",
+        "/HCI2/images/IMG_8505.avif",
+        "/HCI2/images/IMG_8527.avif",
+        "/HCI2/images/IMG_8560.avif"
+      ],
       description: "In the Weeds is free and open to the public from April 10–16, 2026, 12–4 pm.",
       credit: "Documentation photography by Lindsey Mancini, Assistant Director of Communication.",
     },
@@ -34,8 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
       modalDate: "September 5 – 24, 2026",
       year: "2026",
       course: "Gateway",
-      image: "images/think-tank.jpg",
-      docImage: "images/think-tank.jpg",
+      image: "/HCI2/images/THINK TANK/think-tank.avif",
+      docImage: [
+        "/HCI2/images/THINK TANK/AIMG_005021-expanded.avif",
+        "/HCI2/images/THINK TANK/AIMG_00502expanded.avif",
+        "/HCI2/images/THINK TANK/AIMG_00503expanded.avif",
+        "/HCI2/images/THINK TANK/CR.avif",
+        "/HCI2/images/THINK TANK/Edited-Samantha-Segul-Environmental-Betta.avif",
+        "/HCI2/images/THINK TANK/flying-fish.avif",
+        "/HCI2/images/THINK TANK/IMG_0012.avif",
+        "/HCI2/images/THINK TANK/IMG_0210.avif",
+        "/HCI2/images/THINK TANK/medical-fish.avif",
+        "/HCI2/images/THINK TANK/Samantha-Segul-Culinary-Cran.avif",
+        "/HCI2/images/THINK TANK/think-tank.avif"
+      ],
       description: "Think Tank 2026 is free and open to the public from September 5–24, 2026, 12–5 pm.",
       credit: "Documentation photography by Yale School of Art Communications.",
     },
@@ -47,8 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
       modalDate: "March 21 – 29, 2026",
       year: "2026",
       course: "Sculpture",
-      image: "images/good-form-ii.jpg",
-      docImage: "images/good-form-ii.jpg",
+      image: "/HCI2/images/Good-Form/good_form.avif",
+      docImage: [
+        "/HCI2/images/Good-Form/Good-Form-AA-11.avif",
+        "/HCI2/images/Good-Form/Good-Form-AA-20.avif",
+        "/HCI2/images/Good-Form/Good-Form-AA-22.avif",
+        "/HCI2/images/Good-Form/Good-Form-AA-5.avif",
+        "/HCI2/images/Good-Form/Good-Form-Joy-Li-13.avif",
+        "/HCI2/images/Good-Form/Good-Form-Joy-Li-15-copy.avif",
+        "/HCI2/images/Good-Form/Good-Form-Joy-Li-7.avif",
+        "/HCI2/images/Good-Form/Good-Form-JR-1.avif",
+        "/HCI2/images/Good-Form/Good-Form-JR-16.avif",
+        "/HCI2/images/Good-Form/Good-Form-JR-19.avif",
+        "/HCI2/images/Good-Form/Good-Form-JR-9.avif",
+        "/HCI2/images/Good-Form/Good-Form-RR-10.avif",
+        "/HCI2/images/Good-Form/Good-Form-RR-3.avif",
+        "/HCI2/images/Good-Form/Good-Form-RR-7.avif",
+        "/HCI2/images/Good-Form/good_form.avif"
+      ],
       description: "Good Form II is free and open to the public from April 21–29, 2026, 6–8 pm.",
       credit: "Documentation photography by Pat Garcia, Photography MFA '24.",
     },
@@ -148,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const docLightbox = document.getElementById("doc-lightbox");
   const docClose = document.getElementById("doc-lightbox-close");
-  const docImg = document.getElementById("doc-lightbox-img");
+  const docGallery = document.getElementById("doc-lightbox-gallery");
   const docCaption = document.getElementById("doc-lightbox-caption");
 
   function openExhibitModal(id) {
@@ -196,9 +230,68 @@ document.addEventListener("DOMContentLoaded", () => {
   if (exhDocBtn) {
     exhDocBtn.addEventListener("click", () => {
       if (!activeExhibit || !activeExhibit.docImage) return;
+      const images = Array.isArray(activeExhibit.docImage)
+        ? activeExhibit.docImage
+        : [activeExhibit.docImage];
+      if (!images.length) return;
       exhibitModal.classList.remove("is-open");
-      docImg.src = activeExhibit.docImage;
-      docImg.alt = `${activeExhibit.title} Exhibition Documentation`;
+      let gallery = docGallery || document.getElementById("doc-lightbox-gallery");
+      if (!gallery) {
+        const legacyImg = document.getElementById("doc-lightbox-img");
+        if (legacyImg && legacyImg.parentNode) {
+          gallery = document.createElement("div");
+          gallery.id = "doc-lightbox-gallery";
+          gallery.className = "doc-lightbox-gallery";
+          legacyImg.parentNode.replaceChild(gallery, legacyImg);
+        }
+      }
+      if (!gallery) return;
+      gallery.innerHTML = "";
+      images.forEach((src, index) => {
+        const img = document.createElement("img");
+        img.className = "doc-lightbox-img";
+        img.src = src;
+        img.alt = `${activeExhibit.title} Exhibition Documentation ${index + 1}`;
+        img.draggable = false;
+        gallery.appendChild(img);
+      });
+      gallery.scrollLeft = 0;
+      if (!gallery.dataset.wheelBound) {
+        gallery.addEventListener("wheel", (e) => {
+          if (e.deltaY !== 0) {
+            e.preventDefault();
+            gallery.scrollLeft += e.deltaY;
+          }
+        }, { passive: false });
+
+        let isDragging = false;
+        let startX = 0;
+        let scrollStart = 0;
+        gallery.style.cursor = "grab";
+
+        gallery.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          startX = e.pageX - gallery.offsetLeft;
+          scrollStart = gallery.scrollLeft;
+          gallery.style.cursor = "grabbing";
+        });
+
+        gallery.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const x = e.pageX - gallery.offsetLeft;
+          gallery.scrollLeft = scrollStart - (x - startX);
+        });
+
+        ["mouseup", "mouseleave"].forEach((evt) => {
+          gallery.addEventListener(evt, () => {
+            isDragging = false;
+            gallery.style.cursor = "grab";
+          });
+        });
+
+        gallery.dataset.wheelBound = "true";
+      }
       docCaption.textContent = `${activeExhibit.title} — ${activeExhibit.credit || "Exhibition Documentation"}`;
       docLightbox.classList.add("is-open");
     });

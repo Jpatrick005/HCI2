@@ -3209,12 +3209,29 @@ body.modal-open {
   text-align: center;
 }
 
+.doc-lightbox-gallery {
+  max-height: 68vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.doc-lightbox-gallery::-webkit-scrollbar {
+  display: none;
+}
+
 .doc-lightbox-img {
   width: 100%;
   max-height: 68vh;
   object-fit: contain;
   border-radius: 6px;
   margin: 0 auto;
+  flex-shrink: 0;
 }
 
 .doc-lightbox-caption {
