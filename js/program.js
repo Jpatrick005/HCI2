@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   const slides = [
     {
-      src: "assets/tender-hell-1.jpg",
+      src: "assets/images_Tender_hell.jpg",
       caption: "Installation images of the 2026 MFA thesis show in Graphic Design, Tender Hell.",
     },
     {
-      src: "assets/in-the-weeds.jpg",
+      src: "assets/in_the_weeds.avif",
       caption: "Graphic Design Course Exhibition — In the Weeds, Green Hall Gallery.",
     },
     {
-      src: "assets/roma-publications.jpg",
+      src: "assets/roma_publications.jpg",
       caption: "Visiting Artist Show — Roma Publications 1-524 editorial archive display.",
     },
     {
-      src: "assets/think-tank.jpg",
-      caption: "Student studio critique and exhibition installation view, 36 Edgewood Ave.",
+      src: "assets/think-tank/think-tank.avif",
+      caption: "Gateway Mural & Exhibition — Think Tank 2026 installation view.",
     },
   ];
 
