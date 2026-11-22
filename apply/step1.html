@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Step 1: Personal Background | Yale School of Art</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -31,11 +39,11 @@
           <div class="form-section">
             <h2 class="section-title">1. Legal &amp; Preferred Name *</h2>
             <div class="form-grid grid-5">
-              <div class="field"><label>Prefix</label><input type="text" value="Ms." /></div>
-              <div class="field"><label>First Name (Legal/Given) *</label><input class="is-filled" type="text" value="Jane" /></div>
-              <div class="field"><label>Middle Name</label><input type="text" placeholder="Optional" /></div>
-              <div class="field"><label>Last Name (Family) *</label><input class="is-filled" type="text" value="Doe" /></div>
-              <div class="field"><label>Preferred Name</label><input type="text" placeholder="Optional" /></div>
+              <div class="field"><label for="prefix">Prefix</label><input id="prefix" type="text" value="Ms." /></div>
+              <div class="field"><label for="first-name">First Name (Legal/Given) *</label><input id="first-name" class="is-filled" type="text" value="Jane" required /></div>
+              <div class="field"><label for="middle-name">Middle Name</label><input id="middle-name" type="text" placeholder="Optional" /></div>
+              <div class="field"><label for="last-name">Last Name (Family) *</label><input id="last-name" class="is-filled" type="text" value="Doe" required /></div>
+              <div class="field"><label for="preferred-name">Preferred Name</label><input id="preferred-name" type="text" placeholder="Optional" /></div>
             </div>
           </div>
 
@@ -65,34 +73,34 @@
           <div class="form-section">
             <h2 class="section-title">3. Contact &amp; Biographical Information *</h2>
             <div class="form-grid grid-4">
-              <div class="field"><label>Email Address (Migrate Account)</label><input type="email" value="janedoe000@gmail.com" /></div>
-              <div class="field"><label>Mobile Phone &amp; SMS Opt-In *</label><input type="text" value="+1 (203) 555-0192 (Opt-In: Yes)" /></div>
-              <div class="field"><label>Birthdate *</label><input class="is-filled" type="text" value="March / 22 / 2005" /></div>
-              <div class="field"><label>Gender &amp; Pronouns</label><input type="text" value="Female (She / Her)" /></div>
+              <div class="field"><label for="email">Email Address (Migrate Account)</label><input id="email" type="email" value="janedoe000@gmail.com" required /></div>
+              <div class="field"><label for="mobile-phone">Mobile Phone &amp; SMS Opt-In *</label><input id="mobile-phone" type="tel" value="+1 (203) 555-0192 (Opt-In: Yes)" required /></div>
+              <div class="field"><label for="birthdate">Birthdate *</label><input id="birthdate" class="is-filled" type="text" value="March / 22 / 2005" required /></div>
+              <div class="field"><label for="gender-pronouns">Gender &amp; Pronouns</label><input id="gender-pronouns" type="text" value="Female (She / Her)" /></div>
             </div>
           </div>
 
           <div class="form-section">
             <h2 class="section-title">4. Citizenship, Native Language &amp; Federal Demographics *</h2>
             <div class="form-grid grid-4">
-              <div class="field"><label>Country &amp; City of Birth *</label><input type="text" value="Japan — Tokyo" /></div>
-              <div class="field"><label>Primary Citizenship *</label><input class="is-filled" type="text" value="Japan (Non-US Citizen)" /></div>
-              <div class="field"><label>Native Language *</label><input class="is-filled" type="text" value="Japanese / English" /></div>
-              <div class="field"><label>U.S. SSN (Optional / Omit Dashes)</label><input type="text" placeholder="N/A — International Applicant" /></div>
+              <div class="field"><label for="birth-place">Country &amp; City of Birth *</label><input id="birth-place" type="text" value="Japan — Tokyo" required /></div>
+              <div class="field"><label for="primary-citizenship">Primary Citizenship *</label><input id="primary-citizenship" class="is-filled" type="text" value="Japan (Non-US Citizen)" required /></div>
+              <div class="field"><label for="native-language">Native Language *</label><input id="native-language" class="is-filled" type="text" value="Japanese / English" required /></div>
+              <div class="field"><label for="us-ssn">U.S. SSN (Optional / Omit Dashes)</label><input id="us-ssn" type="text" placeholder="N/A — International Applicant" /></div>
             </div>
 
             <div class="sub-box" style="margin-top: 12px;">
               <strong style="font-size: 11.5px; color: #334155;">Race/Ethnicity (Optional — Responses are not part of your admissions file):</strong>
               <div class="inline-options">
                 <span>Hispanic or Latino:</span>
-                <label><input type="radio" name="hispanic" checked /> No</label>
-                <label><input type="radio" name="hispanic" /> Yes</label>
+                <label for="hispanic-no"><input id="hispanic-no" type="radio" name="hispanic" checked /> No</label>
+                <label for="hispanic-yes"><input id="hispanic-yes" type="radio" name="hispanic" /> Yes</label>
                 <span>| Group Membership:</span>
-                <label><input type="checkbox" checked /> Asian</label>
-                <label><input type="checkbox" /> Black</label>
-                <label><input type="checkbox" /> Native American</label>
-                <label><input type="checkbox" /> Pacific Islander</label>
-                <label><input type="checkbox" /> White</label>
+                <label for="race-asian"><input id="race-asian" type="checkbox" checked /> Asian</label>
+                <label for="race-black"><input id="race-black" type="checkbox" /> Black</label>
+                <label for="race-native"><input id="race-native" type="checkbox" /> Native American</label>
+                <label for="race-pacific"><input id="race-pacific" type="checkbox" /> Pacific Islander</label>
+                <label for="race-white"><input id="race-white" type="checkbox" /> White</label>
               </div>
             </div>
           </div>

@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Fall Studio Tours",
           datetime: "Sunday, Nov 15, 2026 • 10:00 AM – 12:00 PM",
           location: "Green Hall Gallery, 1156 Chapel St",
-          image: "images/featured-crits.jpg",
+          image: "assets/featured-crits.jpg",
           link: "apply/account.html",
         },
         {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "MFA Crits in Photography",
           datetime: "Sunday, Nov 15, 2026 • 1:00 PM – 4:00 PM",
           location: "36 Edgewood Ave, Photography Studio",
-          image: "images/featured-crits.jpg",
+          image: "assets/featured-crits.jpg",
           link: "apply/account.html",
         },
         {
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Devotional Alchemy",
           datetime: "Sunday, Nov 15, 2026 • 2:00 PM – 6:00 PM",
           location: "63 Audubon St, New Haven",
-          image: "images/featured-crits.jpg",
+          image: "assets/featured-crits.jpg",
           link: "apply/account.html",
         },
       ],
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Exhibition: Roma Publications",
           datetime: "Tuesday, Nov 24, 2026 • 1:30 PM – 5:00 PM",
           location: "36 Edgewood Ave Gallery, New Haven",
-          image: "images/featured-crits.jpg",
+          image: "assets/featured-crits.jpg",
           link: "program.html",
         },
         {
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Overcurrent: MFA Group Show",
           datetime: "Tuesday, Nov 24, 2026 • 3:00 PM – 6:30 PM",
           location: "Green Hall Gallery, 1156 Chapel St",
-          image: "images/featured-crits.jpg",
+          image: "assets/featured-crits.jpg",
           link: "program.html",
         },
         {
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Printmaking Open Critique",
           datetime: "Tuesday, Nov 24, 2026 • 5:30 PM – 7:30 PM",
           location: "353 Crown St, Print Studio",
-          image: "images/featured-crits.jpg",
+          image: "assets/featured-crits.jpg",
           link: "program.html",
         },
       ],

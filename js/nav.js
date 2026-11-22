@@ -334,6 +334,50 @@ try {
         });
       }
     });
+
+    // 4. Inject shared semantic <footer> using Bootstrap 5 grid & utilities
+    const siteShell = document.querySelector(".site-shell");
+    if (siteShell && !document.querySelector("footer.site-footer")) {
+      const footer = document.createElement("footer");
+      footer.className = "site-footer";
+      footer.setAttribute("aria-label", "Site footer");
+      footer.innerHTML = `
+        <div class="container">
+          <div class="row g-4 align-items-start">
+            <div class="col-12 col-md-4">
+              <p class="site-footer-brand">YALE SCHOOL OF ART</p>
+              <p class="site-footer-text">
+                1156 Chapel Street, POB 208339<br />
+                New Haven, CT 06520-8339
+              </p>
+              <p class="site-footer-text">Est. 1869 &bull; Graduate MFA Programs</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <h2 class="site-footer-heading">Explore</h2>
+              <ul class="site-footer-links">
+                <li><a href="${base}program.html">Graphic Design M.F.A.</a></li>
+                <li><a href="${base}exhibition.html">Student Exhibitions</a></li>
+                <li><a href="${base}calendar.html">Academic &amp; Public Calendar</a></li>
+                <li><a href="${applyBase}account.html">Admissions Application Portal</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <h2 class="site-footer-heading">Resources</h2>
+              <ul class="site-footer-links">
+                <li><a href="${applyBase}step4.html">Portfolio Guidelines</a></li>
+                <li><a href="${applyBase}step5.html">Tuition &amp; Application Fee</a></li>
+                <li><a href="${base}index.html">School Home</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="site-footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <span>&copy; 2026 Yale School of Art. All rights reserved.</span>
+            <a href="#top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Back to top &uarr;</a>
+          </div>
+        </div>
+      `;
+      siteShell.appendChild(footer);
+    }
   }
 
   if (document.readyState === "loading") {

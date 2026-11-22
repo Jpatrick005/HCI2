@@ -30,9 +30,21 @@
   --muted: #4a5568;
   --label-muted: #718096;
 
+  /* Typography Tokens */
+  --font-heading: "Ancizar Serif Bold", Georgia, serif;
+  --font-base: "Inter Design", Inter, Arial, sans-serif;
+
+  /* 8pt Spacing Scale */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+
   color: var(--ink);
   background: var(--surface);
-  font-family: "Inter Design", Inter, Arial, sans-serif;
+  font-family: var(--font-base);
   font-synthesis: none;
 }
 
@@ -119,7 +131,7 @@ input:focus-visible {
 
 .brand span,
 .site-header nav .nav-link {
-  font-family: "Ancizar Serif Bold", Georgia, serif;
+  font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 700;
 }
@@ -194,7 +206,7 @@ input:focus-visible {
 .dropdown-menu a {
   display: block;
   padding: 11px 14px;
-  font-family: "Inter Design", Inter, Arial, sans-serif;
+  font-family: var(--font-base);
   font-size: 13.5px;
   font-weight: 400;
   color: #1e252b;
@@ -4108,4 +4120,91 @@ body.modal-open {
     background: rgba(147, 197, 253, 0.12);
     color: #93c5fd;
   }
+}
+
+
+/* =========================================================
+   SHARED SEMANTIC FOOTER (Bootstrap Grid + Design Tokens)
+   ========================================================= */
+.site-footer {
+  margin-top: var(--space-6);
+  padding: var(--space-5) 0 var(--space-4);
+  background: var(--yale-blue);
+  color: #e2e8f0;
+  font-family: var(--font-base);
+  border-top: 3px solid var(--yale-yellow);
+}
+
+.site-footer-brand {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 var(--space-1);
+  letter-spacing: 0.4px;
+}
+
+.site-footer-heading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--yale-yellow);
+  margin: 0 0 var(--space-2);
+}
+
+.site-footer-text {
+  margin: 0 0 var(--space-1);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.site-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.site-footer-links a {
+  color: #e2e8f0;
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: color 140ms ease;
+}
+
+.site-footer-links a:hover {
+  color: var(--yale-yellow);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.site-footer-bottom {
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 12.5px;
+  color: #94a3b8;
+}
+
+.site-footer-bottom a {
+  color: var(--yale-yellow);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .site-footer {
+  background: #0a1628;
+  border-top-color: #2a384f;
+}
+
+[data-theme="dark"] .site-footer-bottom {
+  border-top-color: #1e293b;
 }

@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Step 2: Degree Program &amp; Academic Record | Yale School of Art</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -26,11 +34,11 @@
           <div class="form-section">
             <h2 class="section-title">1. Please indicate the degree program to which you are applying: *</h2>
             <div class="program-pills">
-              <label class="program-pill"><input type="radio" name="program" checked /><span>Graphic Design</span></label>
-              <label class="program-pill"><input type="radio" name="program" /><span>Graphic Design Preliminary M.F.A.</span></label>
-              <label class="program-pill"><input type="radio" name="program" /><span>Painting / Printmaking</span></label>
-              <label class="program-pill"><input type="radio" name="program" /><span>Photography</span></label>
-              <label class="program-pill"><input type="radio" name="program" /><span>Sculpture</span></label>
+              <label class="program-pill" for="prog-gd"><input id="prog-gd" type="radio" name="program" checked required /><span>Graphic Design</span></label>
+              <label class="program-pill" for="prog-gd-prelim"><input id="prog-gd-prelim" type="radio" name="program" /><span>Graphic Design Preliminary M.F.A.</span></label>
+              <label class="program-pill" for="prog-pp"><input id="prog-pp" type="radio" name="program" /><span>Painting / Printmaking</span></label>
+              <label class="program-pill" for="prog-ph"><input id="prog-ph" type="radio" name="program" /><span>Photography</span></label>
+              <label class="program-pill" for="prog-sc"><input id="prog-sc" type="radio" name="program" /><span>Sculpture</span></label>
             </div>
           </div>
 
@@ -75,30 +83,30 @@
           <div class="form-section sub-box">
             <h2 class="section-title">5. Parent Information &amp; Mandatory Legal Questions *</h2>
             <div class="form-grid grid-3" style="margin-bottom: 16px;">
-              <div class="field"><label>Parent First &amp; Last Name</label><input type="text" value="John Doe" /></div>
-              <div class="field"><label>City &amp; Province / Sector</label><input type="text" value="Raccoon City, Arklay District" /></div>
-              <div class="field"><label>Region / Realm</label><input type="text" value="United Federation" /></div>
+              <div class="field"><label for="parent-name">Parent First &amp; Last Name</label><input id="parent-name" type="text" value="John Doe" required /></div>
+              <div class="field"><label for="parent-city">City &amp; Province / Sector</label><input id="parent-city" type="text" value="Raccoon City, Arklay District" /></div>
+              <div class="field"><label for="parent-region">Region / Realm</label><input id="parent-region" type="text" value="United Federation" /></div>
             </div>
 
             <div class="legal-row">
               <span>&bull; Have you applied to the Yale School of Art previously?</span>
               <div class="inline-options" style="margin-top: 0;">
-                <label><input type="radio" name="q1" /> Yes</label>
-                <label><input type="radio" name="q1" checked /> No</label>
+                <label for="q1-yes"><input id="q1-yes" type="radio" name="q1" required /> Yes</label>
+                <label for="q1-no"><input id="q1-no" type="radio" name="q1" checked /> No</label>
               </div>
             </div>
             <div class="legal-row">
               <span>&bull; Have you ever been convicted of, or pleaded guilty/no contest to, a felony or misdemeanor?</span>
               <div class="inline-options" style="margin-top: 0;">
-                <label><input type="radio" name="q2" /> Yes</label>
-                <label><input type="radio" name="q2" checked /> No</label>
+                <label for="q2-yes"><input id="q2-yes" type="radio" name="q2" required /> Yes</label>
+                <label for="q2-no"><input id="q2-no" type="radio" name="q2" checked /> No</label>
               </div>
             </div>
             <div class="legal-row">
               <span>&bull; Have you ever been disciplined or placed under academic sanction (expulsion, suspension, probation)?</span>
               <div class="inline-options" style="margin-top: 0;">
-                <label><input type="radio" name="q3" /> Yes</label>
-                <label><input type="radio" name="q3" checked /> No</label>
+                <label for="q3-yes"><input id="q3-yes" type="radio" name="q3" required /> Yes</label>
+                <label for="q3-no"><input id="q3-no" type="radio" name="q3" checked /> No</label>
               </div>
             </div>
           </div>
