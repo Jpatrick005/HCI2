@@ -3522,6 +3522,50 @@ body.modal-open {
   }
 }
 
+@media (max-width: 900px) {
+  .exhibits-filter-bar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 12px 10px;
+    padding: 14px 16px;
+  }
+
+  .exhibits-filter-bar .filter-divider {
+    display: none;
+  }
+
+  .exhibits-filter-bar .filter-bar-label {
+    grid-column: 1;
+  }
+
+  .exhibits-filter-bar #exhibit-sort {
+    grid-column: 2;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .exhibits-filter-bar .year-pills {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .exhibits-filter-bar .exhibit-select-course,
+  .exhibits-filter-bar .exhibit-search {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 @media (max-width: 768px) {
   .program-main,
   .exhibits-main {
