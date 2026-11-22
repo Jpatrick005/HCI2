@@ -144,9 +144,14 @@ input:focus-visible {
 }
 
 .site-header nav .nav-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
   color: inherit;
+  line-height: inherit;
   text-decoration: none;
   white-space: nowrap;
+  cursor: default;
   transition: color 150ms ease;
 }
 
@@ -2845,7 +2850,7 @@ body.modal-open {
 }
 
 /* =========================================================
-   12. PAST EXHIBITIONS PAGE (exhibitions.html)
+   12. PAST EXHIBITIONS PAGE (exhibition.html)
    ========================================================= */
 .exhibits-main {
   max-width: 1320px;
@@ -3427,13 +3432,16 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     padding: 16px 20px;
     font-family: "Inter Design", Inter, Arial, sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.4px;
     color: var(--ink);
+    text-align: left;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .site-header nav .nav-link:hover,
