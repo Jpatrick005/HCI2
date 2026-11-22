@@ -192,10 +192,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("modal-open");
   }
 
-  // Clicking a highlighted calendar date updates the sidebar AND reopens the pop-up
+  // Clicking or tapping anywhere on a highlighted calendar date opens the event modal
   eventDays.forEach((day) => {
+    const slideIdx = Number(day.dataset.slide);
+    const dayData = eventsByDate[slideIdx];
+    day.setAttribute("role", "button");
+    if (dayData) {
+      day.setAttribute(
+        "aria-label",
+        `View ${dayData.items.length} scheduled events for ${dayData.dateLabel}`
+      );
+    }
+
     const activateDay = () => {
-      const slideIdx = Number(day.dataset.slide);
       showSlide(slideIdx);
       openEventModal(slideIdx, 0);
     };
